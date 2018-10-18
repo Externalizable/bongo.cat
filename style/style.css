@@ -1,0 +1,135 @@
+body {
+    background-color: #FFF;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    text-align: center;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+a {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    text-decoration: none;
+}
+.hidden {
+    display: none;
+}
+.focus {
+    position: absolute;
+    margin: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 800px;
+    height: 450px;
+    background-repeat: no-repeat;
+}
+.tap {
+    visibility: hidden;
+    display: block;
+    position: absolute;
+    margin: auto;
+    background: rgba(0, 0, 0, 0.45);
+    width: 200px;
+    height: 200px;
+    border-radius: 5px;
+}
+.tap span {
+    display: block;
+    position: relative;
+    font-size: 60px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #FFF;
+}
+.minitap {
+    visibility: inherit;
+    position: relative !important;
+    display: inline-block;
+    width: 125px;
+    height: 125px;
+    margin: 5px;
+}
+.keys {
+    padding: 0px 8px;
+    display: inline-block;
+}
+.key {
+    background: #f5f5f5;
+    border-radius: 5px;
+    border: 1px solid #d0d0d0;
+    box-shadow: 1px 1px 2px 0px rgba(103, 103, 103, 0.8);
+    min-height: 20px;
+    min-width: 20px;
+    padding: 3px;
+    margin: 2px;
+    display: inline-block;
+}
+#bongo-left {
+    top: 43%;
+    left: 2%;
+    transform: translate(0%, -50%);
+}
+#bongo-right {
+    top: 43%;
+    right: 2%;
+    transform: translate(0%, -50%);
+}
+#cymbal-left {
+    top: 57%;
+    left: 2%;
+    transform: translate(0%, -50%);
+}
+#meow {
+    top: 57%;
+    right: 2%;
+    transform: translate(0%, -50%);
+}
+#piano-keys {
+    width: 690px !important;
+    background: none !important;
+    top: 2%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+#marimba-keys {
+    width: 690px !important;
+    background: none !important;
+    bottom: 2%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#bongo {
+    background-image: url('../images/bongo.png');
+}
+#keyboard {
+    background-image: url('../images/keyboard.png');
+    visibility: hidden;
+}
+#cymbal {
+    background-image: url('../images/cymbal.png');
+    visibility: hidden;
+}
+#marimba {
+    background-image: url('../images/marimba.png');
+    visibility: hidden;
+}
+#mouth {
+    background-image: url('../images/m1.png');
+}
+#lpaw {
+    background-image: url('../images/l1.png');
+}
+#rpaw {
+    background-image: url('../images/r1.png');
+}
+footer {
+    position: absolute;
+    margin: auto;
+    bottom: 1%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}

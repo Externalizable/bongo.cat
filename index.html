@@ -1,0 +1,109 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Bongo Cat</title>
+    <link rel="apple-touch-icon" sizes="76x76" href="./apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+    <link rel="manifest" href="./site.webmanifest">
+    <link rel="mask-icon" href="./safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="description" content="Hit the bongos like Bongo Cat!">
+    <meta property="og:title" content="Bongo Cat">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://bongo.cat/thumbnail.png">
+    <meta property="og:url" content="https://bongo.cat">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="https://bongo.cat">
+    <meta name="twitter:title" content="Bongo Cat">
+    <meta name="twitter:description" content="Hit the bongos like Bongo Cat!">
+    <meta name="twitter:image" content="https://bongo.cat/thumbnail.png">
+    <meta name="twitter:image:alt" content="A cat hitting bongos">
+    <meta name="twitter:creator" content="Externalizable">
+    <link rel="preload" href="./images/bongo.png" as="image">
+    <link rel="preload" href="./images/keyboard.png" as="image">
+    <link rel="preload" href="./images/cymbal.png" as="image">
+    <link rel="preload" href="./images/marimba.png" as="image">
+    <link rel="preload" href="./images/m1.png" as="image">
+    <link rel="preload" href="./images/m2.png" as="image">
+    <link rel="preload" href="./images/l1.png" as="image">
+    <link rel="preload" href="./images/l2.png" as="image">
+    <link rel="preload" href="./images/r1.png" as="image">
+    <link rel="preload" href="./images/r2.png" as="image">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="./style/style.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://lowlag.alienbill.com/lowLag.js"></script>
+    <script src="./js/sm2/js/soundmanager2-jsmin.js"></script>
+    <script src="./js/core.js"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-120277085-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-120277085-2');
+
+    </script>
+</head>
+<body>
+<a href="https://github.com/Externalizable/bongo.cat" id="github"><img
+        style="position: absolute; top: 0; right: 0; border: 0;"
+        src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png"
+        alt="Fork me on GitHub"></a>
+<header>
+    <div class="keys">Bongos<br><span class="key">A</span><span class="key">D</span></div>
+    <div class="keys">Cymbal<br><span class="key">C</span></div>
+    <div class="keys">Meow<br><span class="key">SPACE</span></div>
+    <div class="keys">Keyboard<br><span class="key">0</span><span class="key">1</span> ... <span class="key">9</span>
+    </div>
+    <div class="keys">Marimba<br><span class="key">Q</span><span class="key">W</span> ... <span class="key">P</span>
+    </div>
+</header>
+<div class="focus instrument" id="bongo"></div>
+<div class="focus instrument" id="keyboard"></div>
+<div class="focus instrument" id="cymbal"></div>
+<div class="focus instrument" id="marimba"></div>
+<div class="focus" id="mouth"></div>
+<div class="focus" id="lpaw"></div>
+<div class="focus" id="rpaw"></div>
+<div class="tap" id="bongo-left"><span>A</span></div>
+<div class="tap" id="bongo-right"><span>D</span></div>
+<div class="tap" id="cymbal-left"><span>C</span></div>
+<div class="tap" id="piano-keys">
+    <div class="tap minitap" id="key1"><span>1</span></div>
+    <div class="tap minitap" id="key2"><span>2</span></div>
+    <div class="tap minitap" id="key3"><span>3</span></div>
+    <div class="tap minitap" id="key4"><span>4</span></div>
+    <div class="tap minitap" id="key5"><span>5</span></div>
+    <div class="tap minitap" id="key6"><span>6</span></div>
+    <div class="tap minitap" id="key7"><span>7</span></div>
+    <div class="tap minitap" id="key8"><span>8</span></div>
+    <div class="tap minitap" id="key9"><span>9</span></div>
+    <div class="tap minitap" id="key0"><span>0</span></div>
+</div>
+<div class="tap" id="marimba-keys">
+    <div class="tap minitap" id="keyQ"><span>Q</span></div>
+    <div class="tap minitap" id="keyW"><span>W</span></div>
+    <div class="tap minitap" id="keyE"><span>E</span></div>
+    <div class="tap minitap" id="keyR"><span>R</span></div>
+    <div class="tap minitap" id="keyT"><span>T</span></div>
+    <div class="tap minitap" id="keyY"><span>Y</span></div>
+    <div class="tap minitap" id="keyU"><span>U</span></div>
+    <div class="tap minitap" id="keyI"><span>I</span></div>
+    <div class="tap minitap" id="keyO"><span>O</span></div>
+    <div class="tap minitap" id="keyP"><span>P</span></div>
+</div>
+<div class="tap" id="meow">
+    <span>SPACE</span>
+</div>
+<img src="./images/l2.png" class="hidden"/>
+<img src="./images/r2.png" class="hidden"/>
+<img src="./images/m2.png" class="hidden"/>
+<footer>
+    Cat drawing courtesy of <a href="https://twitter.com/StrayRogue" target="_blank">@StrayRogue</a> |
+    Idea by <a href="https://twitter.com/DitzyFlama" target="_blank">@DitzyFlama</a> |
+    Website by <a href="https://twitter.com/Externalizable" target="_blank">@Externalizable</a>
+</footer>
+</body>
+</html>

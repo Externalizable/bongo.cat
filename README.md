@@ -17,7 +17,7 @@ Bongo Cat is a meme created by [DitzyFlama](https://twitter.com/DitzyFlama) ([tw
 StrayRogue gave written permission to @Externalizable on the 15th September 2018 to use their drawing on the Bongo Cat website.  
   
 ## Built with  
-- [lowLag.js](https://lowlag.alienbill.com/) - To play lag free on sounds on a wide range of devices  
+- [lowLag.js](https://lowlag.alienbill.com/) - To play lag free sounds on a wide range of devices  
 - [SoundManager 2](http://www.schillmania.com/projects/soundmanager2/) - Used by lowLag.js  
   
 ## Authors  

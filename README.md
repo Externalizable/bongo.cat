@@ -1,6 +1,6 @@
 # Bongo Cat  
 <p align="center">
-  <img src="https://bongo.cat/thumbnail.png">
+  <img src="https://bongo.cat/meta/thumbnail.png">
 </p>
 Hit the bongos like Bongo Cat! https://bongo.cat  
   

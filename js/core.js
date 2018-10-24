@@ -9,12 +9,11 @@ var KeyEnum = {
     "-" : 1,
     "=" : 0,
     "*" : 1,
-    "Z" : 1,
+    "Z" : 0,
     "S" : 1,
     "X" : 2,
     "D" : 3,
     "C" : 4,
-    "F" : 5,
     "V" : 6,
     "G" : 7,
     "B" : 8,
@@ -22,7 +21,6 @@ var KeyEnum = {
     "N" : 10,
     "J" : 11,
     "M" : 12,
-    "K" : 13,
     "," : 14,
     " " : -1,
     "Q" : 1,
@@ -45,7 +43,6 @@ var InstrumentPerKeyEnum = {
     "X" : InstrumentEnum.KEYBOARD,
     "D" : InstrumentEnum.KEYBOARD,
     "C" : InstrumentEnum.KEYBOARD,
-    "F" : InstrumentEnum.KEYBOARD,
     "V" : InstrumentEnum.KEYBOARD,
     "G" : InstrumentEnum.KEYBOARD,
     "B" : InstrumentEnum.KEYBOARD,
@@ -53,7 +50,6 @@ var InstrumentPerKeyEnum = {
     "N" : InstrumentEnum.KEYBOARD,
     "J" : InstrumentEnum.KEYBOARD,
     "M" : InstrumentEnum.KEYBOARD,
-    "K" : InstrumentEnum.KEYBOARD,
     "," : InstrumentEnum.KEYBOARD,
     " " : InstrumentEnum.MEOW,
     "W" : InstrumentEnum.MARIMBA,
@@ -77,21 +73,19 @@ $(document).ready(function() {
     lowLag.init({'urlPrefix':'./sounds/'});
     lowLag.load(['bongo0.mp3','bongo0.wav'],'bongo0');
     lowLag.load(['bongo1.mp3','bongo1.wav'],'bongo1');
-    lowLag.load(['c.mp3','c.wav'],'keyboard1');
-    // lowLag.load(['c#.mp3','c#.wav'],'c#');
-    lowLag.load(['d.mp3','d.wav'],'keyboard2');
-    // lowLag.load(['d#.mp3','d#.wav'],'d#');
-    lowLag.load(['e.mp3','e.wav'],'keyboard4');
-    // lowLag.load(['e#.mp3','e#.wav'],'e#');
-    lowLag.load(['f.mp3','f.wav'],'keyboard6');
-    // lowLag.load(['f#.mp3','f#.wav'],'f#');
-    lowLag.load(['g.mp3','g.wav'],'keyboard8');
-    // lowLag.load(['g#.mp3','g#.wav'],'g#');
-    lowLag.load(['a.mp3','a.wav'],'keyboard10');
-    // lowLag.load(['a#.mp3','a#.wav'],'a#');
-    lowLag.load(['b.mp3','b.wav'],'keyboard12');
-    // lowLag.load(['b#.mp3','b#.wav'],'b#');
-    lowLag.load(['d2.mp3','d2.wav'],'keyboard14');
+    lowLag.load(['1.mp3','1.wav'],'keyboard0');
+    lowLag.load(['2.mp3','2.wav'],'keyboard1');
+    lowLag.load(['3.mp3','3.wav'],'keyboard2');
+    lowLag.load(['4.mp3','4.wav'],'keyboard3');
+    lowLag.load(['6.mp3','6.wav'],'keyboard4');
+    lowLag.load(['7.mp3','7.wav'],'keyboard6');
+    lowLag.load(['8.mp3','8.wav'],'keyboard7');
+    lowLag.load(['9.mp3','9.wav'],'keyboard8');
+    lowLag.load(['10.mp3','10.wav'],'keyboard9');
+    lowLag.load(['11.mp3','11.wav'],'keyboard10');
+    lowLag.load(['12.mp3','12.wav'],'keyboard11');
+    lowLag.load(['14.mp3','14.wav'],'keyboard12');
+    lowLag.load(['15.mp3','15.wav'],'keyboard14');
     lowLag.load(['meow.mp3','meow.wav'],'meow-1');
     lowLag.load(['cymbal.mp3','cymbal.wav'],'cymbal1');
     lowLag.load(['marimba1.mp3','marimba1.wav'],'marimba1');
@@ -180,7 +174,6 @@ $(document).ready(function() {
         $("#keyX").on("touchstart", function(e) { $.tap(e, "X") });
         $("#keyD").on("touchstart", function(e) { $.tap(e, "D") });
         $("#keyC").on("touchstart", function(e) { $.tap(e, "C") });
-        $("#keyF").on("touchstart", function(e) { $.tap(e, "F") });
         $("#keyV").on("touchstart", function(e) { $.tap(e, "V") });
         $("#keyG").on("touchstart", function(e) { $.tap(e, "G") });
         $("#keyB").on("touchstart", function(e) { $.tap(e, "B") });
@@ -188,7 +181,6 @@ $(document).ready(function() {
         $("#keyN").on("touchstart", function(e) { $.tap(e, "N") });
         $("#keyJ").on("touchstart", function(e) { $.tap(e, "J") });
         $("#keyM").on("touchstart", function(e) { $.tap(e, "M") });
-        $("#keyK").on("touchstart", function(e) { $.tap(e, "K") });
         $("#keyComma").on("touchstart", function(e) { $.tap(e, ",") });
         $("#marimba-keys").css("visibility", "visible");
         $("#keyQ").on("touchstart", function(e) { $.tap(e, "Q") });

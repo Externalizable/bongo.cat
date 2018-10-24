@@ -6,79 +6,92 @@ var InstrumentEnum = {
     MARIMBA: 5
 }
 var KeyEnum = {
-    "A" : 1,
-    "D" : 0,
-    "1" : 1,
-    "2" : 2,
-    "3" : 3,
-    "4" : 4,
-    "5" : 5,
-    "6" : 6,
-    "7" : 7,
-    "8" : 8,
-    "9" : 9,
-    "0" : 0,
+    "-" : 1,
+    "=" : 0,
+    "*" : 1,
+    "Z" : 1,
+    "S" : 1,
+    "X" : 2,
+    "D" : 3,
+    "C" : 4,
+    "F" : 5,
+    "V" : 6,
+    "G" : 7,
+    "B" : 8,
+    "H" : 9,
+    "N" : 10,
+    "J" : 11,
+    "M" : 12,
+    "K" : 13,
+    "," : 14,
     " " : -1,
-    "C" : 1,
     "Q" : 1,
     "W" : 2,
     "E" : 3,
     "R" : 4,
     "T" : 5,
-    "Y" : 6, //US
-    "Z" : 6, //Germany
+    "Y" : 6,
     "U" : 7,
     "I" : 8,
     "O" : 9,
     "P" : 0
 }
 var InstrumentPerKeyEnum = {
-    "A" : InstrumentEnum.BONGO,
-    "D" : InstrumentEnum.BONGO,
-    "1" : InstrumentEnum.KEYBOARD,
-    "2" : InstrumentEnum.KEYBOARD,
-    "3" : InstrumentEnum.KEYBOARD,
-    "4" : InstrumentEnum.KEYBOARD,
-    "5" : InstrumentEnum.KEYBOARD,
-    "6" : InstrumentEnum.KEYBOARD,
-    "7" : InstrumentEnum.KEYBOARD,
-    "8" : InstrumentEnum.KEYBOARD,
-    "9" : InstrumentEnum.KEYBOARD,
-    "0" : InstrumentEnum.KEYBOARD,
+    "-" : InstrumentEnum.BONGO,
+    "=" : InstrumentEnum.BONGO,
+    "*" : InstrumentEnum.CYMBAL,
+    "Z" : InstrumentEnum.KEYBOARD,
+    "S" : InstrumentEnum.KEYBOARD,
+    "X" : InstrumentEnum.KEYBOARD,
+    "D" : InstrumentEnum.KEYBOARD,
+    "C" : InstrumentEnum.KEYBOARD,
+    "F" : InstrumentEnum.KEYBOARD,
+    "V" : InstrumentEnum.KEYBOARD,
+    "G" : InstrumentEnum.KEYBOARD,
+    "B" : InstrumentEnum.KEYBOARD,
+    "H" : InstrumentEnum.KEYBOARD,
+    "N" : InstrumentEnum.KEYBOARD,
+    "J" : InstrumentEnum.KEYBOARD,
+    "M" : InstrumentEnum.KEYBOARD,
+    "K" : InstrumentEnum.KEYBOARD,
+    "," : InstrumentEnum.KEYBOARD,
     " " : InstrumentEnum.MEOW,
-    "C" : InstrumentEnum.CYMBAL,
-    "Q" : InstrumentEnum.MARIMBA,
     "W" : InstrumentEnum.MARIMBA,
+    "Q" : InstrumentEnum.MARIMBA,
     "E" : InstrumentEnum.MARIMBA,
     "R" : InstrumentEnum.MARIMBA,
     "T" : InstrumentEnum.MARIMBA,
-    "Y" : InstrumentEnum.MARIMBA, //US
-    "Z" : InstrumentEnum.MARIMBA, //Germany
+    "Y" : InstrumentEnum.MARIMBA,
     "U" : InstrumentEnum.MARIMBA,
     "I" : InstrumentEnum.MARIMBA,
     "O" : InstrumentEnum.MARIMBA,
     "P" : InstrumentEnum.MARIMBA
 }
 var ClickKeyEquivalentEnum = {
-    "1" : "A",
+    "1" : "-",
     "2" : " ",
-    "3" : "D"
+    "3" : "="
 }
 var pressed = [];
 $(document).ready(function() {
     lowLag.init({'urlPrefix':'./sounds/'});
     lowLag.load(['bongo0.mp3','bongo0.wav'],'bongo0');
     lowLag.load(['bongo1.mp3','bongo1.wav'],'bongo1');
-    lowLag.load(['keyboard1.mp3','keyboard1.wav'],'keyboard1');
-    lowLag.load(['keyboard2.mp3','keyboard2.wav'],'keyboard2');
-    lowLag.load(['keyboard3.mp3','keyboard3.wav'],'keyboard3');
-    lowLag.load(['keyboard4.mp3','keyboard4.wav'],'keyboard4');
-    lowLag.load(['keyboard5.mp3','keyboard5.wav'],'keyboard5');
-    lowLag.load(['keyboard6.mp3','keyboard6.wav'],'keyboard6');
-    lowLag.load(['keyboard7.mp3','keyboard7.wav'],'keyboard7');
-    lowLag.load(['keyboard8.mp3','keyboard8.wav'],'keyboard8');
-    lowLag.load(['keyboard9.mp3','keyboard9.wav'],'keyboard9');
-    lowLag.load(['keyboard0.mp3','keyboard0.wav'],'keyboard0');
+    lowLag.load(['c.mp3','c.wav'],'keyboard1');
+    // lowLag.load(['c#.mp3','c#.wav'],'c#');
+    lowLag.load(['d.mp3','d.wav'],'keyboard2');
+    // lowLag.load(['d#.mp3','d#.wav'],'d#');
+    lowLag.load(['e.mp3','e.wav'],'keyboard4');
+    // lowLag.load(['e#.mp3','e#.wav'],'e#');
+    lowLag.load(['f.mp3','f.wav'],'keyboard6');
+    // lowLag.load(['f#.mp3','f#.wav'],'f#');
+    lowLag.load(['g.mp3','g.wav'],'keyboard8');
+    // lowLag.load(['g#.mp3','g#.wav'],'g#');
+    lowLag.load(['a.mp3','a.wav'],'keyboard10');
+    // lowLag.load(['a#.mp3','a#.wav'],'a#');
+    lowLag.load(['b.mp3','b.wav'],'keyboard12');
+    // lowLag.load(['b#.mp3','b#.wav'],'b#');
+    lowLag.load(['d2.mp3','d2.wav'],'keyboard14');
     lowLag.load(['meow.mp3','meow.wav'],'meow-1');
     lowLag.load(['cymbal.mp3','cymbal.wav'],'cymbal1');
     lowLag.load(['marimba1.mp3','marimba1.wav'],'marimba1');
@@ -158,20 +171,25 @@ $(document).ready(function() {
         }
         $("header").css("visibility", "hidden");
         $("#github").css("visibility", "hidden");
-        $("#bongo-left").css("visibility", "visible").on("touchstart", function(e) { $.tap(e, "A") });
-        $("#bongo-right").css("visibility", "visible").on("touchstart", function(e) { $.tap(e, "D") });
-        $("#cymbal-left").css("visibility", "visible").on("touchstart", function(e) { $.tap(e, "C") });
+        $("#bongo-left").css("visibility", "visible").on("touchstart", function(e) { $.tap(e, "-") });
+        $("#bongo-right").css("visibility", "visible").on("touchstart", function(e) { $.tap(e, "=") });
+        $("#cymbal-left").css("visibility", "visible").on("touchstart", function(e) { $.tap(e, "*") });
         $("#piano-keys").css("visibility", "visible");
-        $("#key1").on("touchstart", function(e) { $.tap(e, "1") });
-        $("#key2").on("touchstart", function(e) { $.tap(e, "2") });
-        $("#key3").on("touchstart", function(e) { $.tap(e, "3") });
-        $("#key4").on("touchstart", function(e) { $.tap(e, "4") });
-        $("#key5").on("touchstart", function(e) { $.tap(e, "5") });
-        $("#key6").on("touchstart", function(e) { $.tap(e, "6") });
-        $("#key7").on("touchstart", function(e) { $.tap(e, "7") });
-        $("#key8").on("touchstart", function(e) { $.tap(e, "8") });
-        $("#key9").on("touchstart", function(e) { $.tap(e, "9") });
-        $("#key0").on("touchstart", function(e) { $.tap(e, "0") });
+        $("#keyZ").on("touchstart", function(e) { $.tap(e, "Z") });
+        $("#keyS").on("touchstart", function(e) { $.tap(e, "S") });
+        $("#keyX").on("touchstart", function(e) { $.tap(e, "X") });
+        $("#keyD").on("touchstart", function(e) { $.tap(e, "D") });
+        $("#keyC").on("touchstart", function(e) { $.tap(e, "C") });
+        $("#keyF").on("touchstart", function(e) { $.tap(e, "F") });
+        $("#keyV").on("touchstart", function(e) { $.tap(e, "V") });
+        $("#keyG").on("touchstart", function(e) { $.tap(e, "G") });
+        $("#keyB").on("touchstart", function(e) { $.tap(e, "B") });
+        $("#keyH").on("touchstart", function(e) { $.tap(e, "H") });
+        $("#keyN").on("touchstart", function(e) { $.tap(e, "N") });
+        $("#keyJ").on("touchstart", function(e) { $.tap(e, "J") });
+        $("#keyM").on("touchstart", function(e) { $.tap(e, "M") });
+        $("#keyK").on("touchstart", function(e) { $.tap(e, "K") });
+        $("#keyComma").on("touchstart", function(e) { $.tap(e, ",") });
         $("#marimba-keys").css("visibility", "visible");
         $("#keyQ").on("touchstart", function(e) { $.tap(e, "Q") });
         $("#keyW").on("touchstart", function(e) { $.tap(e, "W") });

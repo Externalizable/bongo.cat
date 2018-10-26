@@ -10,17 +10,17 @@ Bongo Cat is a meme created by [DitzyFlama](https://twitter.com/DitzyFlama) ([tw
 ## Song Examples
 Ode to Joy - Friedrich Schiller
 > 5 5 6 8 8 6 5 3 1 1 3 5 5 3 3
-5 5 6 8 8 6 5 3 1 1 3 5 3 1 1
-3 3 5 1 3 5 6 5 1 3 5 6 5 3 1 3 1
+> 5 5 6 8 8 6 5 3 1 1 3 5 3 1 1
+> 3 3 5 1 3 5 6 5 1 3 5 6 5 3 1 3 1
 
 In the End - Linkin Park
 > 3 0 0 6 5 5 5 5 6 3
-0 0 6 5 5 5 5 6 3
-C
-Space
-0 0 6 5 5 5 5 6 3
-0 0 6 5 5 5 5 6 3
-C
+> 0 0 6 5 5 5 5 6 3
+> C
+> Space
+> 0 0 6 5 5 5 5 6 3
+> 0 0 6 5 5 5 5 6 3
+> C
 
 Get creative and [submit your own](https://github.com/Externalizable/bongo.cat/issues/new)!
 

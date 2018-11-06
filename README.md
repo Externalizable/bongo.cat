@@ -8,6 +8,10 @@ Hit the bongos like Bongo Cat! https://bongo.cat
 Bongo Cat is a meme created by [DitzyFlama](https://twitter.com/DitzyFlama) ([tweet](https://twitter.com/DitzyFlama/status/993487015499853824)) using [StrayRogue](https://twitter.com/StrayRogue)'s [drawing of a cat](https://twitter.com/StrayRogue/status/992994454058381312).
 
 ## Song Examples
+Happy Birthday to You
+> 1 1 3 1 6 5\
+1 1 3 1 8 6
+
 Ode to Joy - Friedrich Schiller
 > 5 5 6 8 8 6 5 3 1 1 3 5 5 3 3\
 5 5 6 8 8 6 5 3 1 1 3 5 3 1 1\
@@ -21,6 +25,10 @@ Space\
 0 0 6 5 5 5 5 6 3\
 0 0 6 5 5 5 5 6 3\
 C
+
+Come as You Are - Nirvana
+> 1 1 2 3\
+6 3 6 3 3 2 1 5 1 1 6 1 1 2 3
 
 Get creative and [submit your own](https://github.com/Externalizable/bongo.cat/issues/new)!
 

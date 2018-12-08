@@ -23,7 +23,8 @@ a {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 800px;
-    height: 450px;
+    height: 650px;
+    background-position: center;
     background-repeat: no-repeat;
 }
 .tap {

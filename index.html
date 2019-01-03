@@ -40,6 +40,7 @@
     <script src="./js/sm2/js/soundmanager2-jsmin.js"></script>
     <script src="./js/core.js"></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-120277085-2"></script>
+    <button id="playButton">Play Mucic Code</button>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
@@ -93,6 +94,15 @@
 </div>
 <div class="tap" id="meow">
     <span>SPACE</span>
+</div>
+<div id="codeModal" class="code-modal">
+  <div class="code-modal-content">
+    <span class="code-close">&times;</span>
+    <p>Imput Code Below:</p>
+    <textarea rows="15" cols="100" placeholder="Input Code Here" id=code></textarea><br>
+    <input type="text" id="timing" size="23" placeholder="Time between notes (ms)"></textarea>
+    <button id="submitButton">Play Code</button>
+  </div>
 </div>
 <img src="./images/l2.png" class="hidden"/>
 <img src="./images/r2.png" class="hidden"/>

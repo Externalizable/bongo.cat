@@ -214,39 +214,32 @@ $(document).ready(function()  {
     document.getElementById("codeModal").style.display = "none";
     var code = document.getElementById("code").value;
     var timing = parseInt(document.getElementById("timing").value);
-    playCode(code, timing);
+    var length = code.length;
+    var index = 0;
+    var timer = setInterval(function() {
+      index++;
+      var instrument = InstrumentPerKeyEnum[code.charAt(index-1).toUpperCase()];
+      var key = KeyEnum[code.charAt(index-1).toUpperCase()];
+      console.log("Preparing to play: " + instrument + " At key of: " + key + " At index of: " + index + " At char " + code.charAt(index) + " With total song length of " + length);
+
+      if(instrument != undefined && key != undefined) {
+        $.play(instrument, key, true);
+        setTimeout(function() {
+          $.play(instrument, key, false);
+        }, timing/2)
+        console.log("Played: " + instrument + " At key of: " + key);
+      }
+      if(index >= length) {
+        clearInterval(timer);
+        index = 0;
+      }
+    }, timing );
+    /*for (var i = 0; i < code.length; i++)  {
+      var instrument = InstrumentPerKeyEnum[code.charAt(i).toUpperCase()];
+      var key = KeyEnum[code.charAt(i).toUpperCase()];
+      if(instrument != undefined && key != undefined) {
+        $.play(instrument, key, true);
+      }
+    }*/
   });
 });
-
-$(document).ready(function() {
-  var url_string = window.location.href;
-  var url = new URLSearchParams(url_string);
-  var t = url.get("t");
-  var c = url.get("c");
-  console.log(url_string);
-  console.log(c);
-  console.log(t);
-  if(c != null && t != null) {
-    playCode(c, t);
-  }
-});
-
-function playCode(code, timing) {
-  var length = code.length;
-  var index = 0;
-  var timer = setInterval(function() {
-    index++;
-    var instrument = InstrumentPerKeyEnum[code.charAt(index-1).toUpperCase()];
-    var key = KeyEnum[code.charAt(index-1).toUpperCase()];
-    if(instrument != undefined && key != undefined) {
-      $.play(instrument, key, true);
-      setTimeout(function() {
-        $.play(instrument, key, false);
-      }, timing/2)
-    }
-    if(index >= length) {
-      clearInterval(timer);
-      index = 0;
-    }
-  }, timing );
-};

@@ -220,14 +220,11 @@ $(document).ready(function()  {
       index++;
       var instrument = InstrumentPerKeyEnum[code.charAt(index-1).toUpperCase()];
       var key = KeyEnum[code.charAt(index-1).toUpperCase()];
-      console.log("Preparing to play: " + instrument + " At key of: " + key + " At index of: " + index + " At char " + code.charAt(index) + " With total song length of " + length);
-
       if(instrument != undefined && key != undefined) {
         $.play(instrument, key, true);
         setTimeout(function() {
           $.play(instrument, key, false);
         }, timing/2)
-        console.log("Played: " + instrument + " At key of: " + key);
       }
       if(index >= length) {
         clearInterval(timer);

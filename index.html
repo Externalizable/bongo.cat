@@ -95,14 +95,20 @@
 <div class="tap" id="meow">
     <span>SPACE</span>
 </div>
-<div id="codeModal" class="code-modal">
-  <div class="code-modal-content">
-    <span class="code-close">&times;</span>
+<div id="codeModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
     <p>Imput Code Below:</p>
     <textarea rows="15" cols="100" placeholder="Input Code Here" id=code></textarea>
     <button id="spaceClear">Clear Spaces</button><br>
     <input type="text" id="timing" size="23" placeholder="Time between notes (ms)"></textarea>
     <button id="submitButton">Play Code</button>
+  </div>
+</div>
+<div id="playModal" class="modal">
+  <div class="modal-content">
+    <p><font size="25">You Have Recived A Song!</font></p>
+    <button id="playCode">Play!</button>
   </div>
 </div>
 <img src="./images/l2.png" class="hidden"/>

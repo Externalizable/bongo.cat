@@ -207,7 +207,7 @@ $(document).ready(function()  {
   document.getElementById("playButton").addEventListener("click", function() {
     document.getElementById("codeModal").style.display = "block";
   });
-  document.getElementsByClassName("code-close")[0].addEventListener("click", function() {
+  document.getElementsByClassName("close")[0].addEventListener("click", function() {
     document.getElementById("codeModal").style.display = "none";
   });
   document.getElementById("spaceClear").addEventListener("click", function() {
@@ -219,22 +219,39 @@ $(document).ready(function()  {
     document.getElementById("codeModal").style.display = "none";
     var code = document.getElementById("code").value;
     var timing = parseInt(document.getElementById("timing").value);
-    var length = code.length;
-    var index = 0;
-    var timer = setInterval(function() {
-      index++;
-      var instrument = InstrumentPerKeyEnum[code.charAt(index-1).toUpperCase()];
-      var key = KeyEnum[code.charAt(index-1).toUpperCase()];
-      if(instrument != undefined && key != undefined) {
-        $.play(instrument, key, true);
-        setTimeout(function() {
-          $.play(instrument, key, false);
-        }, timing/2)
-      }
-      if(index >= length) {
-        clearInterval(timer);
-        index = 0;
-      }
-    }, timing );
+    playCode(code, timing);
   });
 });
+$(document).ready(function()  {
+  var url_string = window.location.href;
+  var url = new URLSearchParams(url_string);
+  var c = url.get("c");
+  var t = url.get("t");
+  console.log("Code: " + c + " Timing: " + t);
+  if(c != null && t != null) {
+    document.getElementById("playModal").style.display = "block";
+    document.getElementById("playCode").addEventListener("click", function() {
+      document.getElementById("playModal").style.display = "none";
+      playCode(c, t);
+    });
+  }
+});
+function playCode(code, timing) {
+  var length = code.length;
+  var index = 0;
+  var timer = setInterval(function() {
+    index++;
+    var instrument = InstrumentPerKeyEnum[code.charAt(index-1).toUpperCase()];
+    var key = KeyEnum[code.charAt(index-1).toUpperCase()];
+    if(instrument != undefined && key != undefined) {
+      $.play(instrument, key, true);
+      setTimeout(function() {
+        $.play(instrument, key, false);
+      }, timing/2)
+    }
+    if(index >= length) {
+      clearInterval(timer);
+      index = 0;
+    }
+  }, timing );
+}

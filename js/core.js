@@ -210,6 +210,11 @@ $(document).ready(function()  {
   document.getElementsByClassName("code-close")[0].addEventListener("click", function() {
     document.getElementById("codeModal").style.display = "none";
   });
+  document.getElementById("spaceClear").addEventListener("click", function() {
+    var code = document.getElementById("code").value;
+    var newCode = code.replace(/ /g,'');
+    document.getElementById("code").value = newCode;
+  });
   document.getElementById("submitButton").addEventListener("click", function() {
     document.getElementById("codeModal").style.display = "none";
     var code = document.getElementById("code").value;
@@ -231,12 +236,5 @@ $(document).ready(function()  {
         index = 0;
       }
     }, timing );
-    /*for (var i = 0; i < code.length; i++)  {
-      var instrument = InstrumentPerKeyEnum[code.charAt(i).toUpperCase()];
-      var key = KeyEnum[code.charAt(i).toUpperCase()];
-      if(instrument != undefined && key != undefined) {
-        $.play(instrument, key, true);
-      }
-    }*/
   });
 });

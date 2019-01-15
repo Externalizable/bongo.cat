@@ -212,8 +212,21 @@ $(document).ready(function()  {
   });
   document.getElementById("spaceClear").addEventListener("click", function() {
     var code = document.getElementById("code").value;
-    var newCode = code.replace(/ /g,'');
+    var newCode = code.replace(/\s/g,'');
     document.getElementById("code").value = newCode;
+  });
+  document.getElementById("toURL").addEventListener("click", function() {
+    var code = document.getElementById("code").value;
+    var timing = document.getElementById("timing").value;
+    var url = window.location.href+"?"+"p"+"&"+"c="+code+"&"+"t="+timing;
+    var el = document.createElement('textarea');
+    el.value = url;
+    el.setAttribute('readonly', '');
+    el.style = {position: 'absolute', left: '-9999px'};
+    document.body.appendChild(el);
+    el.select();
+    document.execCommand('copy');
+    document.body.removeChild(el);
   });
   document.getElementById("submitButton").addEventListener("click", function() {
     document.getElementById("codeModal").style.display = "none";
@@ -227,7 +240,6 @@ $(document).ready(function()  {
   var url = new URLSearchParams(url_string);
   var c = url.get("c");
   var t = url.get("t");
-  console.log("Code: " + c + " Timing: " + t);
   if(c != null && t != null) {
     document.getElementById("playModal").style.display = "block";
     document.getElementById("playCode").addEventListener("click", function() {

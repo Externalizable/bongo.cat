@@ -157,7 +157,7 @@ $(document).ready(function() {
             }
         }
         $("header").css("visibility", "hidden");
-        $("#github").css("visibility", "hidden");
+        $(".github-corner").css("visibility", "hidden");
         $("#bongo-left").css("visibility", "visible").on("touchstart", function(e) { $.tap(e, "A") });
         $("#bongo-right").css("visibility", "visible").on("touchstart", function(e) { $.tap(e, "D") });
         $("#cymbal-left").css("visibility", "visible").on("touchstart", function(e) { $.tap(e, "C") });

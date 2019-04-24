@@ -1,139 +1,177 @@
 body {
-    background-color: #FFF;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 14px;
-    -moz-user-select: none;
-    -khtml-user-select: none;
-    -webkit-user-select: none;
-    user-select: none;
+  background-color: #fff;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  overflow: hidden;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
 }
+
 header, footer {
-    text-align: center;
-    width: 100%;
+  text-align: center;
+  width: 100%;
 }
-a {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 14px;
-    text-decoration: none;
-}
-.hidden {
-    display: none;
-}
-.focus {
-    position: absolute;
-    margin: auto;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 800px;
-    height: 450px;
-    background-repeat: no-repeat;
-}
-.tap {
-    visibility: hidden;
-    display: block;
-    position: absolute;
-    margin: auto;
-    background: rgba(0, 0, 0, 0.45);
-    width: 200px;
-    height: 200px;
-    border-radius: 5px;
-    text-align: center;
-}
-.tap span {
-    display: block;
-    position: relative;
-    font-size: 60px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #FFF;
-}
-.minitap {
-    visibility: inherit;
-    position: relative !important;
-    display: inline-block;
-    width: 125px;
-    height: 125px;
-    margin: 5px;
-}
-.keys {
-    padding: 0px 8px;
-    display: inline-block;
-}
-.key {
-    background: #f5f5f5;
-    border-radius: 5px;
-    border: 1px solid #d0d0d0;
-    box-shadow: 1px 1px 2px 0px rgba(103, 103, 103, 0.8);
-    min-height: 20px;
-    min-width: 20px;
-    padding: 3px;
-    margin: 2px;
-    display: inline-block;
-}
-#bongo-left {
-    top: 43%;
-    left: 2%;
-    transform: translate(0%, -50%);
-}
-#bongo-right {
-    top: 43%;
-    right: 2%;
-    transform: translate(0%, -50%);
-}
-#cymbal-left {
-    top: 57%;
-    left: 2%;
-    transform: translate(0%, -50%);
-}
-#meow {
-    top: 57%;
-    right: 2%;
-    transform: translate(0%, -50%);
-}
-#piano-keys {
-    width: 690px !important;
-    background: none !important;
-    top: 2%;
-    left: 50%;
-    transform: translate(-50%, 0%);
-}
-#marimba-keys {
-    width: 690px !important;
-    background: none !important;
-    bottom: 2%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-#bongo {
-    background-image: url('../images/bongo.png');
-}
-#keyboard {
-    background-image: url('../images/keyboard.png');
-    visibility: hidden;
-}
-#cymbal {
-    background-image: url('../images/cymbal.png');
-    visibility: hidden;
-}
-#marimba {
-    background-image: url('../images/marimba.png');
-    visibility: hidden;
-}
-#mouth {
-    background-image: url('../images/m1.png');
-}
-#lpaw {
-    background-image: url('../images/l1.png');
-}
-#rpaw {
-    background-image: url('../images/r1.png');
-}
+
 footer {
-    position: absolute;
-    margin: auto;
-    bottom: 1%;
-    left: 50%;
-    transform: translate(-50%, 0%);
+  position: absolute;
+  bottom: 1%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  margin: auto;
+}
+
+a {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.hidden {
+  display: none;
+}
+
+.focus {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 800px;
+  height: 450px;
+  background-repeat: no-repeat;
+  margin: auto;
+}
+
+.tap {
+  visibility: hidden;
+  display: block;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.2);
+  width: 60px;
+  height: 135px;
+  border-radius: 3px;
+  text-align: center;
+  text-transform: rotate(-90deg);
+  margin: auto;
+}
+
+.tap span {
+  display: block;
+  position: relative;
+  font-size: 30px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.minitap {
+  visibility: inherit;
+  position: relative !important;
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  margin: 5px;
+}
+
+.keys {
+  display: inline-block;
+  padding: 0 8px;
+}
+
+.key {
+  background: #f5f5f5;
+  border-radius: 5px;
+  border: 1px solid #d0d0d0;
+  box-shadow: 1px 1px 2px 0 rgba(103, 103, 103, 0.8);
+  min-height: 20px;
+  min-width: 20px;
+  display: inline-block;
+  margin: 2px;
+  padding: 3px;
+}
+
+#bongo-left {
+  top: 40%;
+  left: 2%;
+  transform: translate(0%, -50%);
+}
+
+#bongo-right {
+  top: 40%;
+  right: 2%;
+  transform: translate(0%, -50%);
+}
+
+#cymbal-left {
+  top: 60%;
+  left: 2%;
+  transform: translate(0%, -50%);
+}
+
+#meow {
+  top: 60%;
+  right: 2%;
+  transform: translate(0%, -50%);
+}
+
+#bongo-left>span, #bongo-right>span, #cymbal-left>span, #meow>span {
+  writing-mode: vertical-lr;
+}
+
+#piano-keys, #marimba-keys {
+  width: 100%;
+  background: none !important;
+  left: 50%;
+  height: auto;
+  transform: translate(-50%, 0%);
+}
+
+#piano-keys {
+  top: 0;
+}
+
+#marimba-keys {
+  bottom: 0;
+  margin-bottom: 50px;
+}
+
+#bongo {
+  background-image: url(../images/bongo.png);
+}
+
+#keyboard {
+  background-image: url(../images/keyboard.png);
+  visibility: hidden;
+}
+
+#cymbal {
+  background-image: url(../images/cymbal.png);
+  visibility: hidden;
+}
+
+#marimba {
+  background-image: url(../images/marimba.png);
+  visibility: hidden;
+}
+
+#mouth {
+  background-image: url(../images/m1.png);
+}
+
+#lpaw {
+  background-image: url(../images/l1.png);
+}
+
+#rpaw {
+  background-image: url(../images/r1.png);
+}
+
+@media only screen and (max-width: 769px) {
+  .focus {
+    transform: scale(0.6,0.6) translate(-50%, -50%);
+    transform-origin: top left;
+  }
 }

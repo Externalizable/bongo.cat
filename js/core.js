@@ -187,12 +187,14 @@ $(document).ready(function() {
     }
 });
 $(document).on("mousedown mouseup", function (e) {
-    var keyboardEquivalent = ClickKeyEquivalentEnum[e.which];
-    if (keyboardEquivalent != undefined) {
-        var instrument = InstrumentPerKeyEnum[keyboardEquivalent.toUpperCase()];
-        var key = KeyEnum[keyboardEquivalent.toUpperCase()];
-        if (instrument != undefined && key != undefined) {
-            $.play(instrument, key, e.type === "mousedown");
+    if (!$(e.target).is('a, a *')) {
+        var keyboardEquivalent = ClickKeyEquivalentEnum[e.which];
+        if (keyboardEquivalent != undefined) {
+            var instrument = InstrumentPerKeyEnum[keyboardEquivalent.toUpperCase()];
+            var key = KeyEnum[keyboardEquivalent.toUpperCase()];
+            if (instrument != undefined && key != undefined) {
+                $.play(instrument, key, e.type === "mousedown");
+            }
         }
     }
 });

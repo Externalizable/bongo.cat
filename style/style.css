@@ -9,6 +9,7 @@ body {
 }
 header, footer {
     text-align: center;
+    width: 100%;
 }
 a {
     font-family: 'Open Sans', sans-serif;
@@ -37,6 +38,7 @@ a {
     width: 200px;
     height: 200px;
     border-radius: 5px;
+    text-align: center;
 }
 .tap span {
     display: block;

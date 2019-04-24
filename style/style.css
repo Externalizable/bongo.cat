@@ -2,11 +2,13 @@ body {
     background-color: #FFF;
     font-family: 'Open Sans', sans-serif;
     font-size: 14px;
-    text-align: center;
     -moz-user-select: none;
     -khtml-user-select: none;
     -webkit-user-select: none;
     user-select: none;
+}
+header, footer {
+    text-align: center;
 }
 a {
     font-family: 'Open Sans', sans-serif;

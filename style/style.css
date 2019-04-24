@@ -1,8 +1,12 @@
+html, body {
+  overflow-x: hidden;
+}
+
 body {
+  position: relative;
   background-color: #fff;
   font-family: 'Open Sans', sans-serif;
   font-size: 14px;
-  overflow: hidden;
   -moz-user-select: none;
   -khtml-user-select: none;
   -webkit-user-select: none;
@@ -171,7 +175,7 @@ a {
 
 @media only screen and (max-width: 769px) {
   .focus {
-    transform: scale(0.6,0.6) translate(-50%, -50%);
+    transform: scale(0.6, 0.6) translate(-50%, -50%);
     transform-origin: top left;
   }
 }

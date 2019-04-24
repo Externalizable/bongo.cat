@@ -1,5 +1,6 @@
 html, body {
   overflow-x: hidden;
+  margin: 0;
 }
 
 body {
@@ -14,16 +15,14 @@ body {
 }
 
 header, footer {
+  position: absolute;
   text-align: center;
-  width: 100%;
+  width: calc(100% - 20px);
+  padding: 10px;
 }
 
 footer {
-  position: absolute;
-  bottom: 1%;
-  left: 50%;
-  transform: translate(-50%, 0%);
-  margin: auto;
+  bottom: 0;
 }
 
 a {
@@ -98,25 +97,25 @@ a {
 }
 
 #bongo-left {
-  top: 40%;
+  top: 35%;
   left: 2%;
   transform: translate(0%, -50%);
 }
 
 #bongo-right {
-  top: 40%;
+  top: 35%;
   right: 2%;
   transform: translate(0%, -50%);
 }
 
 #cymbal-left {
-  top: 60%;
+  top: 58%;
   left: 2%;
   transform: translate(0%, -50%);
 }
 
 #meow {
-  top: 60%;
+  top: 58%;
   right: 2%;
   transform: translate(0%, -50%);
 }

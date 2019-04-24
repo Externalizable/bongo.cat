@@ -96,6 +96,10 @@ a {
   padding: 3px;
 }
 
+.github-corner>svg {
+  z-index: 1000;
+}
+
 #bongo-left {
   top: 35%;
   left: 2%;

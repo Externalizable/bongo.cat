@@ -5,6 +5,8 @@ html, body {
 
 body {
   position: relative;
+  height: 100%;
+  width: 100%;
   background-color: #fff;
   font-family: 'Open Sans', sans-serif;
   font-size: 14px;

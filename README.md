@@ -28,7 +28,7 @@ C
 
 Come as You Are - Nirvana
 > 1 1 2 3\
-6 3 6 3 3 2 1 5 1 1 6 1 1 2 3
+6 3 6 3 3 2 1 8 1 1 8 1 2 3
 
 Get creative and [submit your own](https://github.com/Externalizable/bongo.cat/issues/new)!
 

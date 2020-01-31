@@ -30,7 +30,7 @@ Come as You Are - Nirvana
 > 1 1 2 3\
 6 3 6 3 3 2 1 8 1 1 8 1 2 3
 
-Get creative and [submit your own](https://github.com/Externalizable/bongo.cat/issues/new)!
+[Browse more songs](https://github.com/Externalizable/bongo.cat/issues?utf8=%E2%9C%93&q=is%3Aissue+label%3A%22Type%3A+Song+Submission%22+) or [submit your own](https://github.com/Externalizable/bongo.cat/issues/new)!
 
 ## Featured in
 - [Tweet by StrayRogue](https://twitter.com/StrayRogue/status/1041115341290561536), the creator of the cat drawing (15th September 2018)
@@ -39,7 +39,7 @@ Get creative and [submit your own](https://github.com/Externalizable/bongo.cat/i
 - [Bored Button](https://www.boredbutton.com/) website (Date unknown)
 
 ## Permission
-StrayRogue gave written permission to @Externalizable on the 15th September 2018 to use their drawing on the Bongo Cat website.
+StrayRogue gave written permission to Externalizable on the 15th September 2018 to use their drawing on the Bongo Cat website.
 
 ## Built with
 - [lowLag.js](https://lowlag.alienbill.com/) - To play lag free sounds on a wide range of devices

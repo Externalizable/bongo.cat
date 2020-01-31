@@ -1,6 +1,20 @@
+@keyframes wave {
+  0%, 100% {
+    transform: rotate(0)
+  }
+
+  20%, 60% {
+    transform: rotate(-25deg)
+  }
+
+  40%, 80% {
+    transform: rotate(10deg)
+  }
+}
+
 html, body {
   overflow-x: hidden;
-  margin: 0;
+  margin: 0
 }
 
 body {
@@ -8,12 +22,12 @@ body {
   height: 100%;
   width: 100%;
   background-color: #fff;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 14px;
   -moz-user-select: none;
   -khtml-user-select: none;
   -webkit-user-select: none;
   user-select: none;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px
 }
 
 header, footer {
@@ -21,44 +35,177 @@ header, footer {
   text-align: center;
   width: calc(100% - 20px);
   padding: 10px;
+  z-index: 500
+}
+
+header a, footer a {
+  color: #000;
+  text-decoration: none
 }
 
 footer {
-  bottom: 0;
+  bottom: 0
 }
 
-a {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 14px;
-  text-decoration: none;
+footer span {
+  margin: 0 7px
 }
 
-.hidden {
-  display: none;
+hr {
+  position: relative;
+  display: block;
+  width: 200%;
+  height: 5px;
+  background: #000;
+  margin: 140px 0 0 -50%;
+  border: none;
+  transform: rotate(13.5deg);
+  z-index: 10
 }
 
-.focus {
+a#github {
+  z-index: 1000
+}
+
+svg#github {
+  fill: #000;
+  color: #fff;
+  position: absolute;
+  top: 0;
+  border: 0;
+  right: 0;
+  z-index: 1000
+}
+
+svg#github:hover .octo-arm {
+  animation: wave 560ms ease-in-out
+}
+
+select#select-instrument {
+  position: relative;
+  width: 240px;
+  height: 60px;
+  margin: 5px 2px;
+  padding: 0 15px;
+  font-size: 30px;
+  color: inherit;
+  text-align-last: center;
+  background: rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 0 0 4px rgba(0, 0, 0, 0.1);
+  border: 0;
+  border-radius: 5px;
+  transition: all .2s ease-out;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  z-index: 1000
+}
+
+select#select-instrument option {
+  color: inherit;
+  background: #fff;
+  border: 0;
+  outline: none
+}
+
+#container {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 800px;
-  height: 450px;
-  background-repeat: no-repeat;
-  margin: auto;
+  height: 450px
+}
+
+#container div {
+  position: absolute;
+  display: inline-block;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat
+}
+
+#touch {
+  display: none
+}
+
+#keys>div {
+  display: inline-block;
+  padding: 0 8px
+}
+
+#keys>div span {
+  display: block;
+  margin: 0 4px 8px
+}
+
+#taps, #layers {
+  position: absolute;
+  width: 100%;
+  font-size: 30px;
+  text-align: center;
+  color: #fff;
+  z-index: 1000
+}
+
+#layers {
+  top: 0
+}
+
+#taps {
+  bottom: 0;
+  margin-bottom: 50px
+}
+
+#taps .tap {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  margin: 5px 2px
+}
+
+#tap-left, #tap-right {
+  width: calc(2.5 * 60px + 18px) !important;
+  height: calc(2 * 60px + 10px) !important
+}
+
+#tap-space {
+  width: calc(300px + 45px) !important;
+  height: calc(2 * 60px + 10px) !important
+}
+
+.highlight {
+  background: rgba(119, 158, 203, 0.6) !important;
+  transition: none !important;
+  transform: scale(0.95);
+  transform-origin: 50% 50%
+}
+
+.key {
+  display: inline-block !important;
+  min-width: 35px;
+  height: 35px;
+  padding: 4px 0 0 6px;
+  background: #f5f5f5;
+  border: 2px solid #b3b3b3;
+  border-radius: 6px;
+  box-shadow: inset -6px -4px 0 0 #ccc;
+  text-align: left;
+  font-size: 15px
 }
 
 .tap {
-  visibility: hidden;
-  display: block;
-  position: absolute;
   background: rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 0 0 4px rgba(0, 0, 0, 0.1);
   width: 60px;
   height: 135px;
-  border-radius: 3px;
+  border-radius: 5px;
   text-align: center;
-  text-transform: rotate(-90deg);
-  margin: auto;
+  transition: all .2s ease-out;
+  z-index: 1000
 }
 
 .tap span {
@@ -70,117 +217,142 @@ a {
   transform: translate(-50%, -50%);
   color: #fff;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+  pointer-events: none
 }
 
-.minitap {
-  visibility: inherit;
-  position: relative !important;
-  display: inline-block;
-  width: 60px;
-  height: 60px;
-  margin: 5px;
+.cat div {
+  background-position-y: 0;
+  background-position-x: 0
 }
 
-.keys {
-  display: inline-block;
-  padding: 0 8px;
+.cat>#head {
+  background-image: url(../images/cat.png);
+  z-index: 10
 }
 
-.key {
-  background: #f5f5f5;
-  border-radius: 5px;
-  border: 1px solid #d0d0d0;
-  box-shadow: 1px 1px 2px 0 rgba(103, 103, 103, 0.8);
-  min-height: 20px;
-  min-width: 20px;
-  display: inline-block;
-  margin: 2px;
-  padding: 3px;
+.cat>#mouth {
+  background-image: url(../images/mouth.png);
+  z-index: 20
 }
 
-.github-corner>svg {
-  z-index: 1000;
+.cat>#paw-left {
+  background-image: url(../images/paw-left.png);
+  z-index: 30
 }
 
-#bongo-left {
-  top: 35%;
-  left: 2%;
-  transform: translate(0%, -50%);
+.cat>#paw-right {
+  background-image: url(../images/paw-right.png);
+  z-index: 30
 }
 
-#bongo-right {
-  top: 35%;
-  right: 2%;
-  transform: translate(0%, -50%);
+.instruments {
+  z-index: 20
 }
 
-#cymbal-left {
-  top: 58%;
-  left: 2%;
-  transform: translate(0%, -50%);
+.instruments>#bongo, #layer-bongo {
+  background-image: url(../images/bongo.png)
 }
 
-#meow {
-  top: 58%;
-  right: 2%;
-  transform: translate(0%, -50%);
+.instruments>#keyboard, #layer-keyboard {
+  background-image: url(../images/keyboard.png)
 }
 
-#bongo-left>span, #bongo-right>span, #cymbal-left>span, #meow>span {
-  writing-mode: vertical-lr;
+.instruments>#cymbal, #layer-cymbal {
+  background-image: url(../images/cymbal.png)
 }
 
-#piano-keys, #marimba-keys {
-  width: 100%;
-  background: none !important;
-  left: 50%;
-  height: auto;
-  transform: translate(-50%, 0%);
+.instruments>#marimba, #layer-marimba {
+  background-image: url(../images/marimba.png)
 }
 
-#piano-keys {
-  top: 0;
+.instruments>#tambourine, #layer-tambourine {
+  background-image: url(../images/tambourine.png)
 }
 
-#marimba-keys {
-  bottom: 0;
-  margin-bottom: 50px;
+.instruments>#cowbell, #layer-cowbell {
+  background-image: url(../images/cowbell.png)
 }
 
-#bongo {
-  background-image: url(../images/bongo.png);
+.instruments>#keyboard, .instruments>#cymbal, .instruments>#marimba, .instruments>#tambourine, .instruments>#cowbell {
+  visibility: hidden
 }
 
-#keyboard {
-  background-image: url(../images/keyboard.png);
-  visibility: hidden;
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #000 !important;
+    color: #fff !important
+  }
+
+  header a, footer a {
+    color: #fff !important
+  }
+
+  hr {
+    background: #fff !important
+  }
+
+  svg#github {
+    fill: #fff !important;
+    color: #000 !important
+  }
+
+  .key {
+    background: #333;
+    border: 2px solid #252525;
+    box-shadow: inset -6px -4px 0 0 #1b1b1b
+  }
+
+  select#select-instrument, .tap {
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: inset 0 0 0 4px rgba(255, 255, 255, 0.1)
+  }
+
+  select#select-instrument option {
+    background: #000
+  }
+
+  .tap span {
+    text-shadow: none
+  }
+
+  .cat div {
+    background-position-y: -450px
+  }
+
+  .cc-window {
+    border: 1px solid rgba(255, 255, 255, 0.2) !important
+  }
 }
 
-#cymbal {
-  background-image: url(../images/cymbal.png);
-  visibility: hidden;
-}
+@media (prefers-reduced-motion: reduce) {
+  svg#github:hover .octo-arm {
+    animation: none !important
+  }
 
-#marimba {
-  background-image: url(../images/marimba.png);
-  visibility: hidden;
-}
+  select#select-instrument, .tap {
+    transition: none !important
+  }
 
-#mouth {
-  background-image: url(../images/m1.png);
-}
-
-#lpaw {
-  background-image: url(../images/l1.png);
-}
-
-#rpaw {
-  background-image: url(../images/r1.png);
+  .highlight {
+    transform: scale(1) !important
+  }
 }
 
 @media only screen and (max-width: 769px) {
-  .focus {
+  body {
+    font-size: 13px
+  }
+
+  header, a#github {
+    visibility: hidden
+  }
+
+  #touch {
+    display: block
+  }
+
+  #container {
     transform: scale(0.6, 0.6) translate(-50%, -50%);
-    transform-origin: top left;
+    transform-origin: top left
   }
 }

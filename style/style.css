@@ -184,6 +184,10 @@ select#select-instrument option {
   transform-origin: 50% 50%
 }
 
+.octo-arm {
+  transform-origin: 130px 106px
+}
+
 .key {
   display: inline-block !important;
   min-width: 35px;
@@ -195,6 +199,10 @@ select#select-instrument option {
   box-shadow: inset -6px -4px 0 0 #ccc;
   text-align: left;
   font-size: 15px
+}
+
+.key-wide {
+  min-width: 135px !important
 }
 
 .tap {

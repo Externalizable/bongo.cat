@@ -1,6 +1,6 @@
 {
-    "name": "",
-    "short_name": "",
+    "name": "Bongo Cat",
+    "short_name": "Bongo Cat",
     "icons": [
         {
             "src": "/meta/android-chrome-192x192.png",
@@ -13,6 +13,7 @@
             "type": "image/png"
         }
     ],
+    "start_url": ".",
     "theme_color": "#ffffff",
     "background_color": "#ffffff",
     "display": "standalone"

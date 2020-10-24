@@ -328,7 +328,7 @@ var i18n_map = {
     "ca": "Art per cortesia de "+link_StrayRogue},
   "meme": {
     "en": "Meme by "+link_DitzyFlama,
-    "ca": "Meme de"+link_DitzyFlama},
+    "ca": "Meme de "+link_DitzyFlama},
   "website": {
     "en": "Website by "+link_EricHuber,
     "ca": "Lloc web d&#39"+link_EricHuber},

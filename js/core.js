@@ -250,6 +250,30 @@ $(document).on("keydown keyup", function(e) {
     $.play(instrument, key, e.type === "keydown");
   }
 });
+$.note = function(key, delay = 50) {
+  setTimeout(() => {
+      var e = jQuery.Event("keydown");
+      e.key = key;
+      $(document).trigger(e);
+      setTimeout(() => {
+      var e = jQuery.Event("keyup");
+      e.key = key;
+      $(document).trigger(e);
+  }, delay);
+  }, delay);
+};
+
+$.song = function(mySong) {
+  let length = 0;
+  mySong.forEach(function(s) {
+    const data = s.split(':');
+    length += parseInt(data[1]);
+    setTimeout(() => {
+      $.note(data[0].toString(), 80);
+    }, length)
+  });
+};
+
 $(document).on("touchstart touchend", function(e) {
   if (e.target.classList.contains("layer")) {
     if (e.type === "touchstart") {

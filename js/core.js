@@ -11,27 +11,26 @@ const InstrumentEnum = Object.freeze({
   COWBELL: 7
 })
 const KeyEnum = Object.freeze({
-  "A": 1,
+  "Q": 1,
   "D": 0,
-  "1": 1,
-  "2": 2,
-  "3": 3,
-  "4": 4,
-  "5": 5,
-  "6": 6,
-  "7": 7,
-  "8": 8,
-  "9": 9,
-  "0": 0,
+  "&": 1,
+  "é": 2,
+  "\"": 3,
+  "'": 4,
+  "(": 5,
+  "-": 6,
+  "è": 7,
+  "_": 8,
+  "ç": 9,
+  "à": 0,
   " ": 0,
   "C": 1,
-  "Q": 1,
-  "W": 2,
+  "A": 1,
+  "Z": 2,
   "E": 3,
   "R": 4,
   "T": 5,
-  "Y": 6, // QWERTY-Layout
-  "Z": 6, // QWERTZ-Layout
+  "Y": 6,
   "U": 7,
   "I": 8,
   "O": 9,
@@ -40,27 +39,26 @@ const KeyEnum = Object.freeze({
   "F": 1
 })
 const InstrumentPerKeyEnum = Object.freeze({
-  "A": InstrumentEnum.BONGO,
+  "Q": InstrumentEnum.BONGO,
   "D": InstrumentEnum.BONGO,
-  "1": InstrumentEnum.KEYBOARD,
-  "2": InstrumentEnum.KEYBOARD,
-  "3": InstrumentEnum.KEYBOARD,
-  "4": InstrumentEnum.KEYBOARD,
-  "5": InstrumentEnum.KEYBOARD,
-  "6": InstrumentEnum.KEYBOARD,
-  "7": InstrumentEnum.KEYBOARD,
-  "8": InstrumentEnum.KEYBOARD,
-  "9": InstrumentEnum.KEYBOARD,
-  "0": InstrumentEnum.KEYBOARD,
+  "&": InstrumentEnum.KEYBOARD,
+  "é": InstrumentEnum.KEYBOARD,
+  "\'": InstrumentEnum.KEYBOARD,
+  "'": InstrumentEnum.KEYBOARD,
+  "(": InstrumentEnum.KEYBOARD,
+  "-": InstrumentEnum.KEYBOARD,
+  "è": InstrumentEnum.KEYBOARD,
+  "_": InstrumentEnum.KEYBOARD,
+  "ç": InstrumentEnum.KEYBOARD,
+  "à": InstrumentEnum.KEYBOARD,
   " ": InstrumentEnum.MEOW,
   "C": InstrumentEnum.CYMBAL,
-  "Q": InstrumentEnum.MARIMBA,
-  "W": InstrumentEnum.MARIMBA,
+  "A": InstrumentEnum.MARIMBA,
+  "Z": InstrumentEnum.MARIMBA,
   "E": InstrumentEnum.MARIMBA,
   "R": InstrumentEnum.MARIMBA,
   "T": InstrumentEnum.MARIMBA,
-  "Y": InstrumentEnum.MARIMBA, // QWERTY-Layout
-  "Z": InstrumentEnum.MARIMBA, // QWERTZ-Layout
+  "Y": InstrumentEnum.MARIMBA,
   "U": InstrumentEnum.MARIMBA,
   "I": InstrumentEnum.MARIMBA,
   "O": InstrumentEnum.MARIMBA,
@@ -69,13 +67,13 @@ const InstrumentPerKeyEnum = Object.freeze({
   "F": InstrumentEnum.COWBELL
 })
 const ClickKeyEquivalentEnum = Object.freeze({
-  "1": "A",
+  "1": "Q",
   "2": " ",
   "3": "D"
 })
 const TapKeyEquivalentEnum = Object.freeze({
   "tap-left": {
-    "BONGO": ["A"]
+    "BONGO": ["Q"]
   },
   "tap-right": {
     "BONGO": ["D"],
@@ -87,43 +85,43 @@ const TapKeyEquivalentEnum = Object.freeze({
     "MEOW": [" "]
   },
   "tap-1": {
-    "KEYBOARD": ["1"],
-    "MARIMBA": ["Q"]
+    "KEYBOARD": ["&"],
+    "MARIMBA": ["A"]
   },
   "tap-2": {
-    "KEYBOARD": ["2"],
-    "MARIMBA": ["W"]
+    "KEYBOARD": ["é"],
+    "MARIMBA": ["S"]
   },
   "tap-3": {
-    "KEYBOARD": ["3"],
+    "KEYBOARD": ["\""],
     "MARIMBA": ["E"]
   },
   "tap-4": {
-    "KEYBOARD": ["4"],
+    "KEYBOARD": ["'"],
     "MARIMBA": ["R"]
   },
   "tap-5": {
-    "KEYBOARD": ["5"],
+    "KEYBOARD": ["("],
     "MARIMBA": ["T"]
   },
   "tap-6": {
-    "KEYBOARD": ["6"],
-    "MARIMBA": ["Y", "Z"]
+    "KEYBOARD": ["-"],
+    "MARIMBA": ["Y"]
   },
   "tap-7": {
-    "KEYBOARD": ["7"],
+    "KEYBOARD": ["è"],
     "MARIMBA": ["U"]
   },
   "tap-8": {
-    "KEYBOARD": ["8"],
+    "KEYBOARD": ["_"],
     "MARIMBA": ["I"]
   },
   "tap-9": {
-    "KEYBOARD": ["9"],
+    "KEYBOARD": ["ç"],
     "MARIMBA": ["O"]
   },
   "tap-0": {
-    "KEYBOARD": ["0"],
+    "KEYBOARD": ["à"],
     "MARIMBA": ["P"]
   }
 })

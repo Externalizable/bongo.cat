@@ -243,10 +243,10 @@ $(document).on("mousedown mouseup", function(e) {
   }
 });
 $(document).on("keydown keyup", function(e) {
-  e.preventDefault();
   var instrument = InstrumentPerKeyEnum[e.key.toUpperCase()];
   var key = KeyEnum[e.key.toUpperCase()];
   if (instrument != undefined && key != undefined) {
+    e.preventDefault();
     $.play(instrument, key, e.type === "keydown");
   }
 });

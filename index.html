@@ -46,7 +46,7 @@
         },
         "showLink": false,
         "content": {
-          "message": "This website uses cookies to analyze traffic via anonymized and aggregated data."
+          "message": i18n_map["cookies"][preferredLang()]
         },
         "position": "bottom-right"
       })
@@ -76,34 +76,34 @@
   <header>
     <div id="keys">
       <div>
-        <span>Bongos</span>
+        <span i18n="Bongos">Bongos</span>
         <span class="key">A</span>
         <span class="key">D</span>
       </div>
       <div>
-        <span>Cymbal</span>
+        <span i18n="Cymbal">Cymbal</span>
         <span class="key">C</span>
       </div>
       <div>
-        <span>Cowbell</span>
+        <span i18n="Cowbell">Cowbell</span>
         <span class="key">F</span>
       </div>
       <div>
-        <span>Tambourine</span>
+        <span i18n="Tambourine">Tambourine</span>
         <span class="key">B</span>
       </div>
       <div>
-        <span>Meow</span>
-        <span class="key key-wide">SPACE</span>
+        <span i18n="Meow">Meow</span>
+        <span i18n="SPACE" class="key key-wide">SPACE</span>
       </div>
       <div>
-        <span>Piano</span>
+        <span i18n="Piano">Piano</span>
         <span class="key">1</span> ...
         <span class="key">9</span>
         <span class="key">0</span>
       </div>
       <div>
-        <span>Marimba</span>
+        <span i18n="Marimba">Marimba</span>
         <span class="key">Q</span>
         <span class="key">W</span> ...
         <span class="key">P</span>
@@ -130,19 +130,19 @@
   <div id="touch">
     <div id="layers">
       <select id="select-instrument">
-        <option value="layer-bongo" selected>Bongos</option>
-        <option value="layer-keyboard">Keyboard</option>
-        <option value="layer-meow">Meow</option>
-        <option value="layer-cymbal">Cymbal</option>
-        <option value="layer-marimba">Marimba</option>
-        <option value="layer-tambourine">Tambourine</option>
-        <option value="layer-cowbell">Cowbell</option>
+        <option value="layer-bongo" i18n="Bongos" selected>Bongos</option>
+        <option value="layer-keyboard" i18n="Keyboard">Keyboard</option>
+        <option value="layer-meow" i18n="Meow">Meow</option>
+        <option value="layer-cymbal" i18n="Cymbal">Cymbal</option>
+        <option value="layer-marimba" i18n="Marimba">Marimba</option>
+        <option value="layer-tambourine" i18n="Tambourine">Tambourine</option>
+        <option value="layer-cowbell" i18n="Cowbell">Cowbell</option>
       </select>
     </div>
     <div id="taps">
-      <div class="tap" id="tap-left"><span>LEFT</span></div>
-      <div class="tap" id="tap-right"><span>RIGHT</span></div>
-      <div class="tap" id="tap-space"><span>MEOW</span></div>
+      <div class="tap" id="tap-left"><span i18n="LEFT">LEFT</span></div>
+      <div class="tap" id="tap-right"><span i18n="RIGHT">RIGHT</span></div>
+      <div class="tap" id="tap-space"><span i18n="MEOW">MEOW</span></div>
       <div id="tap-keys">
         <div>
           <div class="tap" id="tap-1"><span>1</span></div>
@@ -162,9 +162,10 @@
     </div>
   </div>
   <footer>
-    <span>Art courtesy of <a href="https://twitter.com/StrayRogue" target="_blank">@StrayRogue</a></span>
-    <span>Meme by <a href="https://twitter.com/DitzyFlama" target="_blank">@DitzyFlama</a></span>
-    <span>Website by <a href="https://erics.site/?utm_source=bongo.cat" target="_blank">Eric Huber</a> (<a href="https://twitter.com/Externalizable" target="_blank">@Externalizable</a>)</span>
+    <span i18n="other-lang"><a href="/?lang=ca">En català</a></span>
+    <span i18n="courtesy">Art courtesy of <a href="https://twitter.com/StrayRogue" target="_blank">@StrayRogue</a></span>
+    <span i18n="meme">Meme by <a href="https://twitter.com/DitzyFlama" target="_blank">@DitzyFlama</a></span>
+    <span i18n="website">Website by <a href="https://erics.site/?utm_source=bongo.cat" target="_blank">Eric Huber</a> (<a href="https://twitter.com/Externalizable" target="_blank">@Externalizable</a>)</span>
   </footer>
 </body>
 

@@ -1,0 +1,22 @@
+{
+  "name": "bongo.cat",
+  "version": "1.0.0",
+  "description": "A modern new Bongo Cat",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fernandoanael/bongo.cat.git"
+  },
+  "author": "Fernando Cabral",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fernandoanael/bongo.cat/issues"
+  },
+  "homepage": "https://github.com/fernandoanael/bongo.cat#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

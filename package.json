@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/fernandoanael/bongo.cat#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "webpack": "^5.11.0"
   }
 }

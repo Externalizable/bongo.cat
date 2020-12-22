@@ -1,5 +1,6 @@
 import express from 'express'
 import path from 'path'
+import '../style/style.css'
 
 const app = express()
 const DIST_DIR = __dirname

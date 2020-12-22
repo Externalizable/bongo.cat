@@ -4,7 +4,9 @@
   "description": "A modern new Bongo Cat",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rm -rf dist && webpack --mode development",
+    "start": "node ./dist/server.js"
   },
   "repository": {
     "type": "git",
@@ -17,7 +19,17 @@
   },
   "homepage": "https://github.com/fernandoanael/bongo.cat#readme",
   "dependencies": {
-    "express": "^4.17.1",
-    "webpack": "^5.11.0"
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "babel-loader": "^8.2.2",
+    "html-loader": "^1.3.2",
+    "html-webpack-plugin": "^4.5.0",
+    "webpack": "^5.11.0",
+    "webpack-cli": "^4.2.0",
+    "webpack-dev-server": "^3.11.0",
+    "webpack-node-externals": "^2.5.2"
   }
 }

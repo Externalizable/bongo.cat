@@ -1,3 +1,5 @@
+import {soundManager} from 'soundmanager2'
+
 if (!window.console) console = {log: function() {}};
 
 var lowLag = new function(){
@@ -125,7 +127,7 @@ var lowLag = new function(){
 				this.play = this.playSoundSM2;
 				lowLag.msg("loading SM2 from "+lowLag.sm2url);
 				soundManager.setup({ url: lowLag.sm2url, useHighPerformance:true, 
-					onready:lowLag.sm2Ready , debugMode: true})
+					onready:lowLag.sm2Ready , debugMode: true, useConsole: true})
 
 
 			break;
@@ -174,7 +176,6 @@ var lowLag = new function(){
 
 	this.playSoundSM2 = function(tag){
 		lowLag.msg("playSoundSM2 "+tag);
-
 		soundManager.play(tag);
 	}
 
@@ -371,3 +372,5 @@ this.audioContextPendingRequest = {};
 
 
 }
+
+export {lowLag}

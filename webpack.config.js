@@ -1,24 +1,24 @@
 const path = require('path')
 const webpack = require('webpack')
-const nodeExternal = require('webpack-node-externals')
 const HtmlWebPackPlugin = require('html-webpack-plugin')
 
 module.exports = {
+    mode: 'development',
+    devtool: 'inline-source-map',
     entry: {
-        server: './src/server.js',
         app: './src/app.js'
     },
     output: {
-        path: path.join(__dirname, 'dist'),
+        path: path.resolve(__dirname, 'dist'),
         filename: '[name].js',
-        publicPath : '/'
+        publicPath: '/'
     },
-    target: 'node',
-    node: {
-        __dirname: false,
-        __filename:false
+    target: 'web',
+    devServer: {
+        open: true,
+        contentBase: 'dist/',
+        publicPath: '/'
     },
-    externals: [nodeExternal()],
     module: {
         rules: [
             {
@@ -39,17 +39,11 @@ module.exports = {
                 test: /\.(png|jpg|gif)$/i,
                 use: ['file-loader']
             }
-            // {
-            //     test: /\.html$/,
-            //     use: [{loader: 'html-loader'}]
-            // }
         ]
     },
     plugins: [
         new HtmlWebPackPlugin({
-            template: './src/html/index.html',
-            filename: './index.html',
-            excludeChunks: ['server']
-        })
+            template: "./src/html/index.html"
+        }),
     ]
 }

@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rm -rf dist && webpack --mode development",
-    "start": "node ./dist/server.js"
+    "start": "webpack serve",
+    "watch": "webpack --watch"
   },
   "repository": {
     "type": "git",
@@ -19,9 +20,6 @@
   },
   "homepage": "https://github.com/fernandoanael/bongo.cat#readme",
   "dependencies": {
-    "cookieconsent": "^3.1.1",
-    "express": "^4.17.1",
-    "jquery": "~3.3.1"
   },
   "devDependencies": {
     "@babel/core": "^7.12.10",
@@ -35,7 +33,6 @@
     "url-loader": "^4.1.1",
     "webpack": "^5.11.0",
     "webpack-cli": "^4.2.0",
-    "webpack-dev-server": "^3.11.0",
-    "webpack-node-externals": "^2.5.2"
+    "webpack-dev-server": "^3.11.0"
   }
 }

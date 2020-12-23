@@ -234,22 +234,22 @@ select#select-instrument option {
 }
 
 .cat>#head {
-  background-image: url(../images/cat.png);
+  background-image: url(../imgs/cat.png);
   z-index: 10
 }
 
 .cat>#mouth {
-  background-image: url(../images/mouth.png);
+  background-image: url(../imgs/mouth.png);
   z-index: 20
 }
 
 .cat>#paw-left {
-  background-image: url(../images/paw-left.png);
+  background-image: url(../imgs/paw-left.png);
   z-index: 30
 }
 
 .cat>#paw-right {
-  background-image: url(../images/paw-right.png);
+  background-image: url(../imgs/paw-right.png);
   z-index: 30
 }
 
@@ -258,27 +258,27 @@ select#select-instrument option {
 }
 
 .instruments>#bongo, #layer-bongo {
-  background-image: url(../images/bongo.png)
+  background-image: url(../imgs/bongo.png)
 }
 
 .instruments>#keyboard, #layer-keyboard {
-  background-image: url(../images/keyboard.png)
+  background-image: url(../imgs/keyboard.png)
 }
 
 .instruments>#cymbal, #layer-cymbal {
-  background-image: url(../images/cymbal.png)
+  background-image: url(../imgs/cymbal.png)
 }
 
 .instruments>#marimba, #layer-marimba {
-  background-image: url(../images/marimba.png)
+  background-image: url(../imgs/marimba.png)
 }
 
 .instruments>#tambourine, #layer-tambourine {
-  background-image: url(../images/tambourine.png)
+  background-image: url(../imgs/tambourine.png)
 }
 
 .instruments>#cowbell, #layer-cowbell {
-  background-image: url(../images/cowbell.png)
+  background-image: url(../imgs/cowbell.png)
 }
 
 .instruments>#keyboard, .instruments>#cymbal, .instruments>#marimba, .instruments>#tambourine, .instruments>#cowbell {

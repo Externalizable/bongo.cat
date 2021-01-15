@@ -351,16 +351,22 @@ select#select-instrument option {
     font-size: 13px
   }
 
-  header, a#github {
+  a#github {
     visibility: hidden
-  }
-
-  #touch {
-    display: block
   }
 
   #container {
     transform: scale(0.6, 0.6) translate(-50%, -50%);
     transform-origin: top left
+  }
+}
+
+@media only screen and (pointer: coarse) {
+  header {
+    visibility: hidden
+  }
+
+  #touch {
+    display: block
   }
 }

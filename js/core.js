@@ -231,7 +231,7 @@ $(document).bind("contextmenu", function(e) {
   e.preventDefault();
 });
 $(document).on("mousedown mouseup", function(e) {
-  if (!window.matchMedia("(max-width: 769px)").matches && !$(e.target).is("a, a *")) {
+  if (!window.matchMedia("(pointer: coarse)").matches && !$(e.target).is("a, a *")) {
     var keyboardEquivalent = ClickKeyEquivalentEnum[e.which];
     if (keyboardEquivalent != undefined) {
       var instrument = InstrumentPerKeyEnum[keyboardEquivalent.toUpperCase()];

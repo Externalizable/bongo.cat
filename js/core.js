@@ -145,6 +145,7 @@ const LayersPerInstrumentEnum = Object.freeze({
   "layer-tambourine": InstrumentEnum.TAMBOURINE,
   "layer-cowbell": InstrumentEnum.COWBELL
 })
+
 var pressed = [];
 var currentLayer;
 var allLayers = [];
@@ -185,21 +186,22 @@ $.wait = function(callback, ms) {
 $.play = function(instrument, key, state) {
   var instrumentName = Object.keys(InstrumentEnum).find(k => InstrumentEnum[k] === instrument).toLowerCase();
   var commonKey = KeyEnum[key];
+  var tag = instrumentName + commonKey;
   var id = "#" + (instrument == InstrumentEnum.MEOW ? "mouth" : "paw-" + ((instrument == InstrumentEnum.BONGO ? commonKey : commonKey <= 5 && commonKey != 0 ? 0 : 1) == 0 ? "left" : "right"));
   if (state == true) {
-    if (jQuery.inArray(commonKey, pressed) !== -1) {
+    if (jQuery.inArray(tag, pressed) !== -1) {
       return;
     }
-    pressed.push(commonKey);
+    pressed.push(tag);
     if (instrument != InstrumentEnum.MEOW) {
       $(".instruments>div").each(function(index) {
         $(this).css("visibility", ($(this).attr("id") === instrumentName) ? "visible" : "hidden");
       });
     }
-    lowLag.play(instrumentName + commonKey);
+    lowLag.play(tag);
     $.layers(Object.keys(LayersPerInstrumentEnum).find(k => LayersPerInstrumentEnum[k] == instrument), true);
   } else {
-    pressed.remove(commonKey);
+    pressed.remove(tag);
   }
   $(id).css("background-position-x", (state ? "-800px" : "0"));
 }

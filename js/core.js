@@ -281,9 +281,10 @@ $(document).on("touchstart touchend", function(e) {
   }
 });
 
-var link_StrayRogue = "<a href=\"https://twitter.com/StrayRogue\" target=\"_blank\">@StrayRogue</a>";
+var link_guildedjared = "<a href=\"https://twitter.com/guildedjared\" target=\"_blank\">@guildedjared</a>";
 var link_DitzyFlama = "<a href=\"https://twitter.com/DitzyFlama\" target=\"_blank\">@DitzyFlama</a>";
-var link_EricHuber = "<a href=\"https://erics.site/?utm_source=bongo.cat\" target=\"_blank\">Eric Huber</a> (<a href=\"https://twitter.com/Externalizable\" target=\"_blank\">@Externalizable</a>)";
+var link_EricHuber = "<a href=\"https://erics.site/?utm_source=bongogil.com\" target=\"_blank\">Eric Huber</a> (<a href=\"https://twitter.com/Externalizable\" target=\"_blank\">@Externalizable</a>)";
+var link_fork = "<a href=\"https://twitter.com/xz3r0\" target=\"_blank\">Jared</a> (<a href=\"https://twitch.tv/updownleftdie\" target=\"_blank\">UpDownLeftDie</a>)";
 var i18n_map = {
   "Bongos": {
     "en": "Bongos",
@@ -325,14 +326,17 @@ var i18n_map = {
     "en": "<a href=\"/?lang=ca\">En català</a>",
     "ca": "<a href=\"/?lang=en\">In English</a>"},
   "courtesy": {
-    "en": "Art courtesy of "+link_StrayRogue,
-    "ca": "Art per cortesia de "+link_StrayRogue},
+    "en": "Art courtesy of "+link_guildedjared,
+    "ca": "Art per cortesia de "+link_guildedjared},
   "meme": {
     "en": "Meme by "+link_DitzyFlama,
     "ca": "Meme de "+link_DitzyFlama},
   "website": {
-    "en": "Website by "+link_EricHuber,
+    "en": "Original Website by "+link_EricHuber,
     "ca": "Lloc web d&#39"+link_EricHuber},
+  "fork": {
+      "en": "Gil fork by "+link_jared,
+      "ca": "Lloc web d&#39"+link_jared},
   "cookies": {
     "en": "This website uses cookies to analyze traffic via anonymized and aggregated data.",
     "ca": "Aquest lloc web utilitza galetes per analitzar el trànsit mitjançant dades agregades i anonimitzades."}

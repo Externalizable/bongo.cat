@@ -185,23 +185,29 @@ $.wait = function(callback, ms) {
 $.play = function(instrument, key, state) {
   var instrumentName = Object.keys(InstrumentEnum).find(k => InstrumentEnum[k] === instrument).toLowerCase();
   var commonKey = KeyEnum[key];
-  var id = "#" + (instrument == InstrumentEnum.MEOW ? "mouth" : "paw-" + ((instrument == InstrumentEnum.BONGO ? commonKey : commonKey <= 5 && commonKey != 0 ? 0 : 1) == 0 ? "left" : "right"));
-  if (state == true) {
-    if (jQuery.inArray(commonKey, pressed) !== -1) {
-      return;
-    }
-    pressed.push(commonKey);
-    if (instrument != InstrumentEnum.MEOW) {
-      $(".instruments>div").each(function(index) {
-        $(this).css("visibility", ($(this).attr("id") === instrumentName) ? "visible" : "hidden");
+  if (commonKey !== undefined) {
+    var id = "#" + (instrument == InstrumentEnum.MEOW ? "mouth" : "paw-" + ((instrument == InstrumentEnum.BONGO ? commonKey : commonKey <= 5 && commonKey != 0 ? 0 : 1) == 0 ? "left" : "right"));
+    if (state == true) {
+      if (jQuery.inArray(commonKey, pressed) !== -1) {
+        return;
+      }
+      pressed.push(commonKey);
+      if (instrument != InstrumentEnum.MEOW) {
+        $(".instruments>div").each(function(index) {
+          $(this).css("visibility", ($(this).attr("id") === instrumentName) ? "visible" : "hidden");
+        });
+      }
+      lowLag.play(instrumentName + commonKey);
+      $.layers(Object.keys(LayersPerInstrumentEnum).find(k => LayersPerInstrumentEnum[k] == instrument), true);
+      gtag('event', 'sound_play', {
+        'instrument': instrumentName,
+        'key': key
       });
+    } else {
+      pressed.remove(commonKey);
     }
-    lowLag.play(instrumentName + commonKey);
-    $.layers(Object.keys(LayersPerInstrumentEnum).find(k => LayersPerInstrumentEnum[k] == instrument), true);
-  } else {
-    pressed.remove(commonKey);
+    $(id).css("background-position-x", (state ? "-800px" : "0"));
   }
-  $(id).css("background-position-x", (state ? "-800px" : "0"));
 }
 $.layers = function(selectedLayer) {
   if (selectedLayer !== currentLayer) {
@@ -244,10 +250,9 @@ $(document).on("mousedown mouseup", function(e) {
 });
 $(document).on("keydown keyup", function(e) {
   var instrument = InstrumentPerKeyEnum[e.key.toUpperCase()];
-  var key = KeyEnum[e.key.toUpperCase()];
-  if (instrument != undefined && key != undefined) {
+  if (instrument != undefined) {
     e.preventDefault();
-    $.play(instrument, key, e.type === "keydown");
+    $.play(instrument, e.key.toUpperCase(), e.type === "keydown");
   }
 });
 $(document).on("touchstart touchend", function(e) {

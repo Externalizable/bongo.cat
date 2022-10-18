@@ -1,11 +1,9 @@
 name: Purge Cloudflare Cache
-on: push
-
+on: page_build
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-
     - name: Purge Cloudflare Cache
       uses: jakejarvis/cloudflare-purge-action@master
       env:

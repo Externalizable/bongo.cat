@@ -375,6 +375,7 @@ function internationalize() {
     var id = $(this).attr("i18n");
     this.innerHTML = i18n_map[id][lang];
   });
+  $("html").attr("lang", lang);
 }
 window.addEventListener("languagechange", internationalize);
 document.addEventListener("DOMContentLoaded", internationalize)

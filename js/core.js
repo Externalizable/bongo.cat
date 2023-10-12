@@ -168,9 +168,6 @@ $(document).ready(function() {
   $("select#select-instrument").on("change", function() {
     $.layers($(this).val());
   });
-  gtag('event', 'color_scheme', {
-    'color_scheme': (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')
-  });
 });
 $.loadSimple = function(file) {
   for (i = 0; i <= 1; i++) {
@@ -202,10 +199,6 @@ $.play = function(instrument, key, state) {
       }
       lowLag.play(instrumentName + commonKey);
       $.layers(Object.keys(LayersPerInstrumentEnum).find(k => LayersPerInstrumentEnum[k] == instrument), true);
-      gtag('event', 'sound_play', {
-        'instrument': instrumentName,
-        'key': key
-      });
     } else {
       pressed.remove(commonKey);
     }

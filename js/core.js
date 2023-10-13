@@ -284,7 +284,7 @@ $(document).on("touchstart touchend", function(e) {
 
 var link_StrayRogue = "<a href=\"https://twitter.com/StrayRogue\" target=\"_blank\">@StrayRogue</a>";
 var link_DitzyFlama = "<a href=\"https://twitter.com/DitzyFlama\" target=\"_blank\">@DitzyFlama</a>";
-var link_EricHuber = "<a href=\"https://eric.gg/?utm_source=bongo.cat\" target=\"_blank\">Eric Huber</a> (<a href=\"https://twitter.com/Externalizable\" target=\"_blank\">@Externalizable</a>)";
+var link_EricHuber = "<a href=\"https://eric.gg/?utm_source=bongo.cat\" target=\"_blank\">Eric Huber</a>";
 var i18n_map = {
   "Bongos": {
     "en": "Bongos",

@@ -300,7 +300,7 @@ var i18n_map = {
     "ca": "Pandereta"},
   "Meow": {
     "en": "Meow",
-    "ca": "Miol"},
+    "ca": "Gat"},
   "SPACE": {
     "en": "SPACE",
     "ca": "ESPAI"},
@@ -321,7 +321,7 @@ var i18n_map = {
     "ca": "DRETA"},
   "MEOW": {
     "en": "MEOW",
-    "ca": "MIOL"},
+    "ca": "GAT"},
   "other-lang": {
     "en": "<a href=\"/?lang=ca\">En català</a>",
     "ca": "<a href=\"/?lang=en\">In English</a>"},

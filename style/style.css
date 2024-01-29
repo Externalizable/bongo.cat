@@ -280,6 +280,10 @@ select#select-instrument option {
   background-image: url(../images/cowbell.png)
 }
 
+.instruments>#triangle, #layer-triangle {
+  background-image: url(../images/triangle.png);
+}
+
 .instruments>#keyboard, .instruments>#cymbal, .instruments>#marimba, .instruments>#tambourine, .instruments>#cowbell {
   visibility: hidden
 }

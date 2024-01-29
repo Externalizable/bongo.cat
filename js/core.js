@@ -8,7 +8,8 @@ const InstrumentEnum = Object.freeze({
   CYMBAL: 4,
   MARIMBA: 5,
   TAMBOURINE: 6,
-  COWBELL: 7
+  COWBELL: 7,
+  TRIANGLE: 8,
 })
 const KeyEnum = Object.freeze({
   "A": 1,
@@ -37,7 +38,8 @@ const KeyEnum = Object.freeze({
   "O": 9,
   "P": 0,
   "B": 1,
-  "F": 1
+  "F": 1,
+  "S": 1,
 })
 const InstrumentPerKeyEnum = Object.freeze({
   "A": InstrumentEnum.BONGO,
@@ -66,7 +68,8 @@ const InstrumentPerKeyEnum = Object.freeze({
   "O": InstrumentEnum.MARIMBA,
   "P": InstrumentEnum.MARIMBA,
   "B": InstrumentEnum.TAMBOURINE,
-  "F": InstrumentEnum.COWBELL
+  "F": InstrumentEnum.COWBELL,
+  "S": InstrumentEnum.TRIANGLE,
 })
 const ClickKeyEquivalentEnum = Object.freeze({
   "1": "A",
@@ -81,6 +84,7 @@ const TapKeyEquivalentEnum = Object.freeze({
     "BONGO": ["D"],
     "CYMBAL": ["C"],
     "TAMBOURINE": ["B"],
+    "TRIANGLE": ["S"],
     "COWBELL": ["F"]
   },
   "tap-space": {
@@ -134,6 +138,7 @@ const TapKeysPerLayerEnum = Object.freeze({
   "layer-cymbal": ["tap-right"],
   "layer-marimba": ["tap-keys"],
   "layer-tambourine": ["tap-right"],
+  "layer-triangle": ["tap-right"],
   "layer-cowbell": ["tap-right"]
 })
 const LayersPerInstrumentEnum = Object.freeze({
@@ -143,7 +148,8 @@ const LayersPerInstrumentEnum = Object.freeze({
   "layer-cymbal": InstrumentEnum.CYMBAL,
   "layer-marimba": InstrumentEnum.MARIMBA,
   "layer-tambourine": InstrumentEnum.TAMBOURINE,
-  "layer-cowbell": InstrumentEnum.COWBELL
+  "layer-cowbell": InstrumentEnum.COWBELL,
+  "layer-triangle": InstrumentEnum.TRIANGLE
 })
 var pressed = [];
 var currentLayer;
@@ -163,6 +169,7 @@ $(document).ready(function() {
   $.loadSimple("meow");
   $.loadSimple("cymbal");
   $.loadSimple("tambourine");
+  $.loadSimple("triangle");
   $.loadSimple("cowbell");
   $.layers("layer-bongo");
   $("select#select-instrument").on("change", function() {
@@ -298,6 +305,9 @@ var i18n_map = {
   "Tambourine": {
     "en": "Tambourine",
     "ca": "Pandereta"},
+  "Triangle": {
+    "en": "Triangle",
+    "ca": "Triangle"},
   "Meow": {
     "en": "Meow",
     "ca": "Miol"},

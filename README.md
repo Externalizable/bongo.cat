@@ -1,14 +1,11 @@
 # Bongo Cat
 <p align="center">
   <a href="https://bongo.cat">
-    <img src="https://bongo.cat/meta/thumbnail.png">
+    <img src="![bongo cat avatar](https://github.com/Externalizable/bongo.cat/assets/160492903/3c6706dc-b678-4bc1-9992-6c2abd605152)
+">
   </a>  
 </p>
 Hit the bongos like Bongo Cat! https://bongo.cat
-
-## About the meme
-Bongo Cat is a meme created by [DitzyFlama](https://twitter.com/DitzyFlama) ([tweet](https://twitter.com/DitzyFlama/status/993487015499853824)) using [StrayRogue](https://twitter.com/StrayRogue)'s [drawing of a cat](https://twitter.com/StrayRogue/status/992994454058381312).
-
 ## Song Examples
 Happy Birthday to You
 > 1 1 3 1 6 5\
@@ -41,10 +38,10 @@ Come as You Are - Nirvana
 - [Bored Button](https://www.boredbutton.com/) website (Date unknown)
 
 ## Permission
-StrayRogue gave written permission to Externalizable on the 15th September 2018 to use their drawing on the Bongo Cat website.
+StrayRogue gave written permission to Externalizable on the 15th of September 2018 to use their drawing on the Bongo Cat website.
 
 ## Built with
-- [lowLag.js](https://lowlag.alienbill.com/) - To play lag free sounds on a wide range of devices
+- [lowLag.js](https://lowlag.alienbill.com/) - To play lag-free sounds on a wide range of devices
 - [SoundManager 2](http://www.schillmania.com/projects/soundmanager2/) - Used by lowLag.js
 
 ## Authors
